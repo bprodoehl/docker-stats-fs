@@ -108,14 +108,14 @@ function stats(opts) {
       //console.log('Looking at ' + JSON.stringify(iface));
       if (!stats.networks) { stats.networks = {}; }
       stats.networks[iface.Interface] = {
-        'rx_bytes': iface.bytes.Receive,
-        'rx_dropped': iface.drop.Receive,
-        'rx_errors': iface.errs.Receive,
-        'rx_packets': iface.packets.Receive,
-        'tx_bytes': iface.bytes.Transmit,
-        'tx_dropped': iface.drop.Transmit,
-        'tx_errors': iface.errs.Transmit,
-        'tx_packets': iface.packets.Transmit
+        'rx_bytes': parseInt(iface.bytes.Receive, 10),
+        'rx_dropped': parseInt(iface.drop.Receive, 10),
+        'rx_errors': parseInt(iface.errs.Receive, 10),
+        'rx_packets': parseInt(iface.packets.Receive, 10),
+        'tx_bytes': parseInt(iface.bytes.Transmit, 10),
+        'tx_dropped': parseInt(iface.drop.Transmit, 10),
+        'tx_errors': parseInt(iface.errs.Transmit, 10),
+        'tx_packets': parseInt(iface.packets.Transmit, 10)
       };
     }
   }
