@@ -44,12 +44,12 @@ function sectiontable(buf) {
         }
       */
       if (s.indexOf('-') === s.length-1) {
-        o[s.substr(s,s.length-1)+keys[i]] = l[i];
+        o[s.substr(s,s.length-1)+keys[i]] = l[i].replace(/:$/, '');
       } else {
         /*
         {
           bytes:{
-            Recieve:43124236,
+            Receive:43124236,
             Transmit:87782782
           }
         }
