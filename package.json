@@ -1,0 +1,29 @@
+{
+  "name": "docker-stats-fs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bprodoehl/docker-stats-fs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bprodoehl/docker-stats-fs/issues"
+  },
+  "homepage": "https://github.com/bprodoehl/docker-stats-fs#readme",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "docker-allcontainers": "^0.4.0",
+    "dockerode": "^2.2.10",
+    "minimist": "^1.2.0",
+    "pump": "^1.0.1",
+    "split2": "^2.0.1",
+    "through2": "^2.0.1"
+  }
+}
