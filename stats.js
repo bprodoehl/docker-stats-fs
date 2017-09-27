@@ -66,7 +66,7 @@ function sectiontable(buf) {
   return data;
 }
 
-function stats(opts) {
+function stats(opts, callback) {
   opts = opts || {};
   var result = through.obj();
   var events = opts.events || allContainers(opts);
@@ -135,6 +135,7 @@ function stats(opts) {
         fs.readFile(procPath + containerPid + '/net/dev', function(err, buf) {
           if (err) {
             console.log('Error fetching network stats: ' + JSON.stringify(err));
+            callback(err);
           } else {
             var data = sectiontable(buf);
             //console.log(JSON.stringify(data));
